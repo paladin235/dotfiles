@@ -2,8 +2,9 @@
 
 import os
 from argparse import ArgumentParser
+from functools import cached_property
 
-from os.path import expanduser, join, dirname, abspath, isfile
+from os.path import expanduser, join, dirname, abspath, isfile, basename
 
 
 def parse():
@@ -14,15 +15,14 @@ def parse():
 
 class DotfileManager:
     def __init__(self) -> None:
-        self._backup_root = None
         self.home_path = expanduser('~')
 
-    @property
+    @cached_property
     def backup_root(self):
-        if self._backup_root is None:
-            self._backup_root = join(self.home_path, '.dotfiles-backup')
-            os.mkdir(self._backup_root)
-        return self._backup_root
+        backup_root = join(self.home_path, '.dotfiles-backup')
+        if not os.path.exists(backup_root):
+            os.mkdir(backup_root)
+        return backup_root
 
     def install(self) -> None:
         self.install_dotfiles()
@@ -36,7 +36,7 @@ class DotfileManager:
             os.remove(dest_path)
             return False
         elif os.path.isfile(dest_path):
-            backup_path = join(self.backup_root, dest_path)
+            backup_path = join(self.backup_root, basename(dest_path))
             print(f'Moving file to backup: {dest_path} -> {backup_path}')
             os.rename(dest_path, backup_path)
             return False
