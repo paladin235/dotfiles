@@ -1,0 +1,7 @@
+set clipboard+=unnamed
+set so=7
+set ideajoin
+set hlsearch
+set surround
+set commentary
+

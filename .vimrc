@@ -179,9 +179,9 @@ let g:sh_fold_enabled=1
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
 
 " Linebreak on 500 characters
 set lbr
@@ -423,3 +423,12 @@ endfunction
 
 set encoding=utf8
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+"vim-plug
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-commentary'
+
+" On-demand loading
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+call plug#end()

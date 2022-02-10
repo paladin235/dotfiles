@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = Daniel Pierce
+email = dpierce@phdata.io
+[core]
+	pager = less -FRX
+	autocrlf = input
+[pull]
+	ff = only
+[includeIf "gitdir:~/git/cfa/"]
+  path = ~/git/cfa/.git-cfa.conf
