@@ -63,7 +63,7 @@ antigen init ~/.antigenrc
 theme $ZSH_THEME
 
 export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/Library/Python/3.9/bin:$HOME/.local/bin:$PATH
 
 # Go related stuff
 export GOROOT="/usr/local/go"
