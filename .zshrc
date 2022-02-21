@@ -87,6 +87,7 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 export HISTSIZE="1000000"
 export SAVEHIST="1000000"
+export HISTORY_IGNORE="(ll|ls|cd|python|ipython)"
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
