@@ -126,8 +126,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 export MAVEN_OPTS="-Xms1g -Xmx1g"
 export CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-export LESS="-FRX"
 alias aada=~/.aada_venv/bin/aada
+export LESS="-FRX"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
