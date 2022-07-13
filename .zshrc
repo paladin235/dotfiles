@@ -151,6 +151,9 @@ complete -F __start_kubectl k
 
 eval "$(direnv hook zsh)"
 
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=$(which chromium)
+
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
 fi
