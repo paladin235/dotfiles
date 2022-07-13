@@ -424,6 +424,12 @@ endfunction
 set encoding=utf8
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 "vim-plug
 call plug#begin()
 Plug 'tpope/vim-sensible'
