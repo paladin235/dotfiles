@@ -63,7 +63,9 @@ antigen init ~/.antigenrc
 theme $ZSH_THEME
 
 export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
-export PATH=$HOME/Library/Python/3.9/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/Library/Python/3.8/bin:$HOME/.local/bin:$PATH
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Go related stuff
 export GOROOT="/usr/local/go"
@@ -117,15 +119,10 @@ export HISTORY_IGNORE="(ll|ls|cd|python|ipython|gb|gcm|glog|gloga|glg)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-function git-loc() {
-  author=$1
-  git log --author="$author" --pretty=tformat: --numstat | \
-    awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf "added lines: %s, removed lines: %s, total lines: %s\n", add, subs, loc }' -
-}
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=~/venv
-source /usr/local/bin/virtualenvwrapper.sh
+source /Users/daniel/Library/Python/3.8/bin/virtualenvwrapper.sh
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
 export MAVEN_OPTS="-Xms1g -Xmx1g"
 export CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -149,7 +146,6 @@ export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 # unset __conda_setup
 # <<< conda initialize <<<
 
-source ~/.aws_func
 source <(kubectl completion zsh)
 complete -F __start_kubectl k
 
