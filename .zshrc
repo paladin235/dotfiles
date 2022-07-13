@@ -70,6 +70,9 @@ export GOROOT="/usr/local/go"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
+# Add node
+export PATH="$PATH:/usr/local/Cellar/node@16/16.15.1/bin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 export PYTHONSTARTUP=$HOME/.pythonrc
 export EDITOR="vim"
@@ -128,6 +131,8 @@ export MAVEN_OPTS="-Xms1g -Xmx1g"
 export CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 alias aada=~/.aada_venv/bin/aada
 export LESS="-FRX"
+
+export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

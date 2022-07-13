@@ -1,7 +1,7 @@
 alias readlink=greadlink
 alias find=gfind
 alias gb="git branch -vv"
-alias gla="git pull --all --prune"
+alias gla="git pull --all --prune --tags"
 alias df="df -h"
 alias k="kubectl"
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/SnowSQL
