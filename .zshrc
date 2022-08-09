@@ -73,7 +73,7 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
 # Add node
-export PATH="$PATH:/usr/local/Cellar/node@16/16.15.1/bin"
+export PATH="$PATH:/opt/homebrew/Cellar/node@16/16.16.0/bin"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PYTHONSTARTUP=$HOME/.pythonrc
@@ -123,10 +123,12 @@ export HISTORY_IGNORE="(ll|ls|cd|python|ipython|gb|gcm|glog|gloga|glg)"
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=~/venv
 source /Users/daniel/Library/Python/3.8/bin/virtualenvwrapper.sh
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.3/libexec/openjdk.jdk/Contents/Home
 export MAVEN_OPTS="-Xms1g -Xmx1g"
+
 export CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-alias aada=~/.aada_venv/bin/aada
+alias aada=~/venv/aada/bin/aada
+
 export LESS="-FRX"
 
 export DOTNET_ROOT="/usr/local/opt/dotnet/libexec"
