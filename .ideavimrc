@@ -5,3 +5,5 @@ set hlsearch
 set surround
 set commentary
 
+let @r = '0f=wysiw)irequireNonNull<esc>j'
+

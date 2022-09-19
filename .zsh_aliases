@@ -6,3 +6,4 @@ alias df="df -h"
 alias k="kubectl"
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/SnowSQL
 alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
+alias tree="tree --dirsfirst"
