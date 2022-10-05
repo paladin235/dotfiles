@@ -73,7 +73,7 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
 # Add node
-export PATH="$PATH:/opt/homebrew/Cellar/node@16/16.16.0/bin"
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PYTHONSTARTUP=$HOME/.pythonrc
