@@ -434,6 +434,7 @@ endif
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 " On-demand loading
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }

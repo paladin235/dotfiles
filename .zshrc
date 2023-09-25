@@ -123,7 +123,8 @@ export HISTORY_IGNORE="(ll|ls|cd|python|ipython|gb|gcm|glog|gloga|glg)"
 export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 export WORKON_HOME=~/venv
 source /Users/daniel/Library/Python/3.8/bin/virtualenvwrapper.sh
-export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.3/libexec/openjdk.jdk/Contents/Home
+#export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.3/libexec/openjdk.jdk/Contents/Home
+export JAVA_HOME=/opt/homebrew/Cellar/openjdk@11/11.0.15/libexec/openjdk.jdk/Contents/Home
 export MAVEN_OPTS="-Xms1g -Xmx1g"
 
 export CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
