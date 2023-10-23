@@ -14,3 +14,5 @@ email = dpierce@phdata.io
 	count-lines = "! git log --author=\"$1\" --pretty=tformat: --numstat | awk '{ add += $1; subs += $2; loc += $1 - $2 } END { printf \"added lines: %s, removed lines: %s, total lines: %s\\n\", add, subs, loc }' #"
 [push]
 	autoSetupRemote = true
+[format]
+	pretty = %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%B%Creset
