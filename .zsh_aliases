@@ -5,5 +5,5 @@ alias gla="git pull --all --prune --tags"
 alias df="df -h"
 alias k="kubectl"
 alias snowsql=/Applications/SnowSQL.app/Contents/MacOS/SnowSQL
-alias idea='open -na "IntelliJ IDEA.app" --args "$@"'
+alias idea='open -na "/Users/daniel/Applications/IntelliJ IDEA Ultimate.app" --args "$@"'
 alias tree="tree --dirsfirst"

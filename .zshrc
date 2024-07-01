@@ -73,7 +73,7 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
 # Add node
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PYTHONSTARTUP=$HOME/.pythonrc
@@ -124,7 +124,7 @@ export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 export WORKON_HOME=~/venv
 source /Users/daniel/Library/Python/3.8/bin/virtualenvwrapper.sh
 #export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.3/libexec/openjdk.jdk/Contents/Home
-export JAVA_HOME=/opt/homebrew/Cellar/openjdk@11/11.0.15/libexec/openjdk.jdk/Contents/Home
+export JAVA_HOME=/opt/homebrew/Cellar/openjdk@11/11.0.23/libexec/openjdk.jdk/Contents/Home
 export MAVEN_OPTS="-Xms1g -Xmx1g"
 
 export CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -160,3 +160,6 @@ export PUPPETEER_EXECUTABLE_PATH=$(which chromium)
 if [ -f ~/.zsh_aliases ]; then
     source ~/.zsh_aliases
 fi
+# toolkit-cli managed section #
+export PATH="$PATH:/Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/toolkit-cli"
+# end toolkit-cli managed section #
