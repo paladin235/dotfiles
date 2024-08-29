@@ -15,11 +15,13 @@ def parse():
 
 class DotfileManager:
     def __init__(self) -> None:
-        self.home_path = expanduser('~')
+        self.current_dir = abspath(dirname(__file__))
+        self.user_home = expanduser('~')
+        self.home_dir = join(self.current_dir, 'home')
 
     @cached_property
     def backup_root(self):
-        backup_root = join(self.home_path, '.dotfiles-backup')
+        backup_root = join(self.user_home, '.dotfiles-backup')
         if not os.path.exists(backup_root):
             os.mkdir(backup_root)
         return backup_root
@@ -44,21 +46,14 @@ class DotfileManager:
             raise RuntimeError(f'Found an unexpected directory: {dest_path}')
 
     def install_dotfiles(self) -> None:
-        current_dir = abspath(dirname(__file__))
-
-        for name in os.listdir(current_dir):
-            if not name.startswith('.'):
-                continue
-            if not isfile(name):
-                continue
-            if name.endswith('.iml'):
-                continue
-
-            src_path = join(current_dir, name)
-            dest_path = join(self.home_path, name)
+        for name in os.listdir(self.home_dir):
+            src_path = join(self.home_dir, name)
+            dest_path = join(self.user_home, name)
             linked = False
             if os.path.exists(dest_path):
                 linked = self.move_to_backup(src_path, dest_path)
+            elif os.path.islink(dest_path):
+                os.remove(dest_path)
 
             if not linked:
                 print(f'Creating symlink: {src_path} -> {dest_path}')
