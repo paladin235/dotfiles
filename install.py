@@ -23,7 +23,7 @@ class DotfileManager:
     def backup_root(self):
         backup_root = join(self.user_home, '.dotfiles-backup')
         if not os.path.exists(backup_root):
-            os.mkdir(backup_root)
+            os.makedirs(backup_root)
         return backup_root
 
     def install(self) -> None:
@@ -37,27 +37,30 @@ class DotfileManager:
             print(f'Removing symlink: {dest_path}')
             os.remove(dest_path)
             return False
-        elif os.path.isfile(dest_path):
+        else:
             backup_path = join(self.backup_root, basename(dest_path))
             print(f'Moving file to backup: {dest_path} -> {backup_path}')
             os.rename(dest_path, backup_path)
             return False
-        else:
-            raise RuntimeError(f'Found an unexpected directory: {dest_path}')
 
     def install_dotfiles(self) -> None:
         for name in os.listdir(self.home_dir):
             src_path = join(self.home_dir, name)
-            dest_path = join(self.user_home, name)
-            linked = False
-            if os.path.exists(dest_path):
-                linked = self.move_to_backup(src_path, dest_path)
-            elif os.path.islink(dest_path):
-                os.remove(dest_path)
+            if os.path.isfile(src_path):
+                dest_path = join(self.user_home, name)
+                self.safe_link(src_path, dest_path)
+            elif name == '.config':
+                for config_dir in os.listdir(src_path):
+                    dest_path = join(self.user_home, name, config_dir)
+                    self.safe_link(join(src_path, config_dir), dest_path)
 
-            if not linked:
-                print(f'Creating symlink: {src_path} -> {dest_path}')
-                os.symlink(src_path, dest_path)
+    def safe_link(self, src_path, dest_path):
+        linked = False
+        if os.path.exists(dest_path) or os.path.islink(dest_path):
+            linked = self.move_to_backup(src_path, dest_path)
+        if not linked:
+            print(f'Creating symlink: {src_path} -> {dest_path}')
+            os.symlink(src_path, dest_path)
 
 
 def main():
