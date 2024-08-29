@@ -3,25 +3,40 @@ if status is-interactive
     set -g fish_key_bindings fish_vi_key_bindings
 end
 
+# system abbreviations
+abbr df df -h
+abbr k kubectl
+abbr tree tree --dirsfirst
+
 # git abbreviations
-abbr -a -- ga 'git add'
-abbr -a -- gaa 'git add --all'
-abbr -a -- gb 'git branch -vv'
-abbr -a -- gbD 'git branch --delete --force'
-abbr -a -- gc 'git commit --verbose'
-abbr -a -- gca 'git commit --verbose --all'
-abbr -a -- gcam 'git commit --verbose --all -m'
-abbr -a -- gcan! 'git commit --verbose --all --no-edit --amend'
-abbr -a -- gcm 'git checkout (git_main_branch)'
-abbr -a -- gco 'git checkout'
-abbr -a -- gd 'git diff'
-abbr -a -- gla 'git pull --all --prune --tags'
-abbr -a -- glg 'git log --stat'
-abbr -a -- glod 'git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset"'
-abbr -a -- gp 'git push'
-abbr -a -- grb 'git rebase'
-abbr -a -- grbm 'git rebase (git_main_branch)'
-abbr -a -- gsh 'git show'
-abbr -a -- gst 'git status'
-abbr -a -- gsta 'git stash apply'
-abbr -a -- gstp 'git stash pop'
+abbr ga git add
+abbr gaa git add --all
+abbr gb git branch -vv
+abbr gbD git branch --delete --force
+abbr gc git commit --verbose
+abbr gca git commit --verbose --all
+abbr gcam --set-cursor git commit --verbose --all -m \"%\"
+abbr gcan! git commit --verbose --all --no-edit --amend
+abbr gcm git checkout (git_main_branch)
+abbr gco git checkout
+abbr gd git diff
+abbr gla git pull --all --prune --tags
+abbr gl git log
+abbr gls git log --stat
+abbr glg git log --graph --pretty=single
+abbr gp git push
+abbr grb git rebase
+abbr grbm git rebase (git_main_branch)
+abbr gsh git show
+abbr gst git status
+abbr gsta git stash apply
+abbr gstam --set-cursor git stash apply -m "%"
+abbr gstp git stash pop
+
+# macos abbreviations
+switch (uname)
+ case Darwin
+    abbr -a -- readlink greadlink
+    abbr -a -- find gfind
+    abbr -a -- idea open -na "/Users/daniel/Applications/IntelliJ IDEA Ultimate.app" --args
+end
