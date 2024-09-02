@@ -15,6 +15,7 @@ abbr gb git branch -vv
 abbr gbD git branch --delete --force
 abbr gc git commit --verbose
 abbr gca git commit --verbose --all
+abbr gcb git checkout -b
 abbr gcam --set-cursor git commit --verbose --all -m \"%\"
 abbr gcan! git commit --verbose --all --no-edit --amend
 abbr gcm git checkout (git_main_branch)
@@ -25,8 +26,11 @@ abbr gl git log
 abbr gls git log --stat
 abbr glg git log --graph --pretty=single
 abbr gp git push
+abbr gpf git push --force
 abbr grb git rebase
 abbr grbm git rebase (git_main_branch)
+abbr grh git reset 
+abbr grhh git reset --hard
 abbr gsh git show
 abbr gst git status
 abbr gsta git stash apply
@@ -40,3 +44,5 @@ switch (uname)
     abbr -a -- find gfind
     abbr -a -- idea open -na "/Users/daniel/Applications/IntelliJ IDEA Ultimate.app" --args
 end
+
+direnv hook fish | source
