@@ -3,6 +3,6 @@ function gradle
     echo "Using gradle wrapper"
     ./gradlew $argv
   else
-    gradle $argv
+    command gradle $argv
   end
 end
