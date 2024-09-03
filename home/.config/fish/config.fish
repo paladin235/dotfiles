@@ -18,7 +18,7 @@ abbr gca git commit --verbose --all
 abbr gcb git checkout -b
 abbr gcam --set-cursor git commit --verbose --all -m \"%\"
 abbr gcan! git commit --verbose --all --no-edit --amend
-abbr gcm git checkout (git_main_branch)
+abbr gcm 'git checkout (git_main_branch)'
 abbr gco git checkout
 abbr gd git diff
 abbr gla git pull --all --prune --tags
@@ -28,7 +28,7 @@ abbr glg git log --graph --pretty=single
 abbr gp git push
 abbr gpf git push --force
 abbr grb git rebase
-abbr grbm git rebase (git_main_branch)
+abbr grbm 'git rebase (git_main_branch)'
 abbr grh git reset 
 abbr grhh git reset --hard
 abbr gsh git show
