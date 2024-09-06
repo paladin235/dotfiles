@@ -1,7 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR EDITOR:vim
-SETUVAR JAVA_HOME:/opt/homebrew/Cellar/openjdk\x4021/21\x2e0\x2e4/libexec/openjdk\x2ejdk/Contents/Home
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:1
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:brblack
@@ -44,4 +43,3 @@ SETUVAR fish_pager_color_selected_completion:\x1d
 SETUVAR fish_pager_color_selected_description:\x1d
 SETUVAR fish_pager_color_selected_prefix:\x1d
 SETUVAR fish_prompt_pwd_full_dirs:3
-SETUVAR fish_user_paths:/Users/daniel/git/phdata/toolkit/toolkit\x2dcli/build/install/toolkit\x2dcli\x1e/opt/homebrew/bin

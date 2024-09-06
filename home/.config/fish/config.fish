@@ -33,16 +33,28 @@ abbr grh git reset
 abbr grhh git reset --hard
 abbr gsh git show
 abbr gst git status
-abbr gsta git stash apply
-abbr gstam --set-cursor git stash apply -m "%"
+abbr gsta git stash
+abbr gstd git stash drop
+abbr gsts git stash show
+abbr gstaa git stash apply
+abbr gstam --set-cursor git stash -m "%"
 abbr gstp git stash pop
 
 # macos abbreviations
 switch (uname)
- case Darwin
-    abbr -a -- readlink greadlink
-    abbr -a -- find gfind
-    abbr -a -- idea open -na "/Users/daniel/Applications/IntelliJ IDEA Ultimate.app" --args
+    case Darwin
+        abbr -a -- readlink greadlink
+        abbr -a -- find gfind
+        abbr -a -- idea open -na "/Users/daniel/Applications/IntelliJ IDEA Ultimate.app" --args
+
+        fish_add_path -g /Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/toolkit-cli
+        fish_add_path -g /opt/homebrew/bin
+        set -gx JAVA_HOME /opt/homebrew/Cellar/openjdk@21/21.0.4/libexec/openjdk.jdk/Contents/Home
+    case Linux
+        fish_add_path -g /opt/bin
 end
 
-direnv hook fish | source
+# add direnv hook if direnv is installed
+if type -q direnv
+    direnv hook fish | source
+end
