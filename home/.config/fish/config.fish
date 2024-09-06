@@ -28,6 +28,8 @@ abbr glg git log --graph --pretty=single
 abbr gp git push
 abbr gpf git push --force
 abbr grb git rebase
+abbr grba git rebase --abort
+abbr grbc git rebase --continue
 abbr grbm 'git rebase (git_main_branch)'
 abbr grh git reset 
 abbr grhh git reset --hard
@@ -40,7 +42,9 @@ abbr gstaa git stash apply
 abbr gstam --set-cursor git stash -m "%"
 abbr gstp git stash pop
 
-# macos abbreviations
+fish_add_path -g ~/.local/bin
+
+# OS specific config
 switch (uname)
     case Darwin
         abbr -a -- readlink greadlink
