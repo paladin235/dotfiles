@@ -18,3 +18,5 @@ email = dpierce@phdata.io
 	pretty = %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%B%Creset
 [pretty]
   single = format: %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
+[init]
+	defaultBranch = main
