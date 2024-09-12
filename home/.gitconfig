@@ -20,3 +20,5 @@ email = dpierce@phdata.io
   single = format: %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
 [init]
 	defaultBranch = main
+[rerere]
+	enabled = true
