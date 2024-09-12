@@ -37,6 +37,7 @@ abbr gsh git show
 abbr gst git status
 abbr gsta git stash
 abbr gstd git stash drop
+abbr gstl git stash list
 abbr gsts git stash show
 abbr gstaa git stash apply
 abbr gstam --set-cursor git stash -m "%"
