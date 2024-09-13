@@ -15,9 +15,10 @@ abbr gb git branch -vv
 abbr gbD git branch --delete --force
 abbr gc git commit --verbose
 abbr gca git commit --verbose --all
-abbr gcb git checkout -b
+abbr gca! git commit --verbose --all --amend
 abbr gcam --set-cursor git commit --verbose --all -m \"%\"
 abbr gcan! git commit --verbose --all --no-edit --amend
+abbr gcb git checkout -b
 abbr gcm 'git checkout (git_main_branch)'
 abbr gco git checkout
 abbr gd git diff
