@@ -41,7 +41,7 @@ abbr gstd git stash drop
 abbr gstl git stash list
 abbr gsts git stash show
 abbr gstaa git stash apply
-abbr gstam --set-cursor git stash -m "%"
+abbr gstam --set-cursor git stash -m \"%\"
 abbr gstp git stash pop
 
 fish_add_path -g ~/.local/bin
