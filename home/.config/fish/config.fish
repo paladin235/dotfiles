@@ -16,7 +16,7 @@ abbr gbD git branch --delete --force
 abbr gc git commit --verbose
 abbr gca git commit --verbose --all
 abbr gca! git commit --verbose --all --amend
-abbr gcam --set-cursor git commit --verbose --all -m \"%\"
+abbr gcam --set-cursor git commit --verbose --all -m 
 abbr gcan! git commit --verbose --all --no-edit --amend
 abbr gcb git checkout -b
 abbr gcm 'git checkout (git_main_branch)'
@@ -41,7 +41,7 @@ abbr gstd git stash drop
 abbr gstl git stash list
 abbr gsts git stash show
 abbr gstaa git stash apply
-abbr gstam --set-cursor git stash -m \"%\"
+abbr gstam --set-cursor git stash -m 
 abbr gstp git stash pop
 
 fish_add_path -g ~/.local/bin
@@ -55,6 +55,7 @@ switch (uname)
 
         fish_add_path -g /Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/toolkit-cli
         fish_add_path -g /opt/homebrew/bin
+        fish_add_path -g /opt/homebrew/opt/node@20/bin
         set -gx JAVA_HOME /opt/homebrew/Cellar/openjdk@21/21.0.4/libexec/openjdk.jdk/Contents/Home
     case Linux
         fish_add_path -g /opt/bin
