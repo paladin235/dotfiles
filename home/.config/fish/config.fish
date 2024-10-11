@@ -58,6 +58,7 @@ switch (uname)
         fish_add_path -g /opt/homebrew/opt/node@20/bin
         set -gx JAVA_HOME /opt/homebrew/Cellar/openjdk@21/21.0.4/libexec/openjdk.jdk/Contents/Home
     case Linux
+        set -gx MAN_POSIXLY_CORRECT 1
         fish_add_path -g /opt/bin
 end
 
