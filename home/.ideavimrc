@@ -1,9 +1,23 @@
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'vim-scripts/argtextobj.vim'
+Plug 'tommcdo/vim-exchange'
+
 set clipboard+=unnamedplus
 set so=7
 set ideajoin
+set ignorecase
+set smartcase
 set hlsearch
 set surround
-set commentary
 
-let @r = '0f=wysiw)irequireNonNull<esc>j'
+let mapleader = " "
+nnoremap <leader>t :NERDTree<CR>
 
+:map <leader>f <Action>(GotoFile)
+:map <leader>c <Action>(GotoClass)
+:map <leader>e <Action>(Switcher)
+:map <leader>d <Action>(Debug)
+:map <leader>r <Action>(Run)
+:map <leader>b <Action>(BuildMenu)
+:map <leader>l <Action>(FileStructurePopup)
