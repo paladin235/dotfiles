@@ -6,8 +6,8 @@ Plug 'tommcdo/vim-exchange'
 set clipboard+=unnamedplus
 set so=7
 set ideajoin
-set ignorecase
-set smartcase
+"set ignorecase
+"set smartcase
 set hlsearch
 set surround
 
@@ -16,8 +16,9 @@ nnoremap <leader>t :NERDTree<CR>
 
 :map <leader>f <Action>(GotoFile)
 :map <leader>c <Action>(GotoClass)
-:map <leader>e <Action>(Switcher)
+:map <leader>e <Action>(RecentFiles)
 :map <leader>d <Action>(Debug)
-:map <leader>r <Action>(Run)
+:map <leader>r <Action>(RunTestGroup)
 :map <leader>b <Action>(BuildMenu)
 :map <leader>l <Action>(FileStructurePopup)
+:map <leader>gf <Action>(ExtractFunction)
