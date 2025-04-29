@@ -56,7 +56,6 @@ switch (uname)
         fish_add_path -g /Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/toolkit-cli
         fish_add_path -g /opt/homebrew/bin
         fish_add_path -g /opt/homebrew/opt/node@22/bin
-        fish_add_path -g /opt/homebrew/opt/pnpm@9/bin
         set -gx JAVA_HOME /opt/homebrew/Cellar/openjdk@21/21.0.5/libexec/openjdk.jdk/Contents/Home
     case Linux
         set -gx MAN_POSIXLY_CORRECT 1

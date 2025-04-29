@@ -11,6 +11,9 @@ set ideajoin
 set hlsearch
 set surround
 
+inoremap <c-k> <Up>
+inoremap <c-j> <Down>
+
 let mapleader = " "
 nnoremap <leader>t :NERDTree<CR>
 
@@ -22,3 +25,4 @@ nnoremap <leader>t :NERDTree<CR>
 :map <leader>b <Action>(BuildMenu)
 :map <leader>l <Action>(FileStructurePopup)
 :map <leader>gf <Action>(ExtractFunction)
+:map <leader>vh <Action>(Vcs.History)

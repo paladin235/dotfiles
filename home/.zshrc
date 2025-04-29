@@ -163,3 +163,5 @@ fi
 # toolkit-cli managed section #
 export PATH="$PATH:/Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/toolkit-cli"
 # end toolkit-cli managed section #
+
+source /Users/daniel/.config/broot/launcher/bash/br
