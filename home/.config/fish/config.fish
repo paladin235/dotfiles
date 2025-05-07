@@ -57,6 +57,7 @@ switch (uname)
         fish_add_path -g /opt/homebrew/bin
         fish_add_path -g /opt/homebrew/opt/node@22/bin
         set -gx JAVA_HOME /opt/homebrew/Cellar/openjdk@21/21.0.5/libexec/openjdk.jdk/Contents/Home
+        set -gx SNOWFLAKE_PRIVATE_KEY_FILE "$HOME/.ssh/toolkit/snowboarder-it.p8"
     case Linux
         set -gx MAN_POSIXLY_CORRECT 1
         fish_add_path -g /opt/bin
@@ -66,3 +67,6 @@ end
 if type -q direnv
     direnv hook fish | source
 end
+
+# Added by Windsurf
+fish_add_path /Users/daniel/.codeium/windsurf/bin
