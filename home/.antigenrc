@@ -8,7 +8,7 @@ antigen bundle vi-mode
 antigen bundle pip
 antigen bundle brew
 antigen bundle themes
-antigen bundle gradle
+/* antigen bundle gradle */
 antigen bundle docker
 antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting

@@ -14,7 +14,7 @@ email = paladin2350@gmail.com
 [push]
 	autoSetupRemote = true
 [format]
-  pretty = %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an %ae>%n%B%Creset
+  pretty = %n%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an %ae>%n%B%Creset
 [pretty]
   single = format: %Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset
 [init]

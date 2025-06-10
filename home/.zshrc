@@ -123,8 +123,8 @@ export HISTORY_IGNORE="(ll|ls|cd|python|ipython|gb|gcm|glog|gloga|glg)"
 export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 export WORKON_HOME=~/venv
 source /Users/daniel/Library/Python/3.8/bin/virtualenvwrapper.sh
-#export JAVA_HOME=/opt/homebrew/Cellar/openjdk@17/17.0.3/libexec/openjdk.jdk/Contents/Home
-export JAVA_HOME=/opt/homebrew/Cellar/openjdk@11/11.0.24/libexec/openjdk.jdk/Contents/Home
+export JAVA_HOME=$(/usr/libexec/java_home -v 21)
+
 export MAVEN_OPTS="-Xms1g -Xmx1g"
 
 export CHROME_EXECUTABLE_PATH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -165,3 +165,17 @@ export PATH="$PATH:/Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/to
 # end toolkit-cli managed section #
 
 source /Users/daniel/.config/broot/launcher/bash/br
+
+gradle() {
+  local dir="$PWD"
+  while [[ "$dir" != "/" ]]; do
+    if [[ -f "$dir/gradlew" ]]; then
+      echo "Using gradle wrapper at $dir/gradlew"
+      "$dir/gradlew" "$@"
+      return
+    fi
+    dir=$(dirname "$dir")
+  done
+  echo "No gradlew found in parent directories, using system gradle"
+  command gradle "$@"
+}
