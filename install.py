@@ -28,6 +28,12 @@ class DotfileManager:
 
     def install(self) -> None:
         self.install_dotfiles()
+        self.make_vim_dirs()
+
+    def make_vim_dirs(self):
+        os.makedirs(join(self.user_home, '.vim', 'swap'), exist_ok=True)
+        os.makedirs(join(self.user_home, '.vim', 'undo'), exist_ok=True)
+        os.makedirs(join(self.user_home, '.vim', 'backup'), exist_ok=True)
 
     def move_to_backup(self, src_path, dest_path):
         if os.path.islink(dest_path):
