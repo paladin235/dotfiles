@@ -81,7 +81,111 @@
   "Custom Command" : "Custom Shell",
   "HotKey Key Code" : 111,
   "Keyboard Map" : {
-
+    "0x9-0x40000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 32,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0xf72b-0x100000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 4,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0x48-0x120000-0x4" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 33,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0xf701-0x300000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 6,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0x74-0x100000-0x11" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 27,
+      "Text" : "CE374CCA-E6D9-44A3-B5DB-E74AAADC1E9D",
+      "Escaping" : 2
+    },
+    "0xf72d-0x100000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 8,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0x19-0x60000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 39,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0xf700-0x300000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 7,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0x4c-0x120000-0x25" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 34,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0xf72c-0x100000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 9,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0xf729-0x100000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 5,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0x68-0x100000-0x4" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 2,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0xf72c-0x20000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 9,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0x6c-0x100000-0x25" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 0,
+      "Text" : "",
+      "Escaping" : 1
+    },
+    "0xf72d-0x20000" : {
+      "Version" : 2,
+      "Apply Mode" : 0,
+      "Action" : 8,
+      "Text" : "",
+      "Escaping" : 1
+    }
   },
   "Ansi 14 Color" : {
     "Green Component" : 1,
