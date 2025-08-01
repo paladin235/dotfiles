@@ -46,13 +46,14 @@ class DotfileManager:
     def install_dotfiles(self) -> None:
         for name in os.listdir(self.home_dir):
             src_path = join(self.home_dir, name)
+            dest_path = join(self.user_home, name)
             if os.path.isfile(src_path):
-                dest_path = join(self.user_home, name)
                 self.safe_link(src_path, dest_path)
             elif name == '.config':
-                for config_dir in os.listdir(src_path):
-                    dest_path = join(self.user_home, name, config_dir)
-                    self.safe_link(join(src_path, config_dir), dest_path)
+                os.makedirs(dest_path, exist_ok=True)
+                for entry in os.listdir(src_path):
+                    inner_path = join(dest_path, entry)
+                    self.safe_link(join(src_path, entry), inner_path)
 
     def safe_link(self, src_path, dest_path):
         linked = False
