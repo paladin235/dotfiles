@@ -156,12 +156,13 @@ set ffs=unix,dos
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " backup to ~/.tmp 
 set backup 
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
-"set backupdir=~/appdata/local/temp
+set backupdir=~/.vim/backup
 set backupskip=/tmp/*,/private/tmp/* 
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
-"set directory=~/appdata/local/temp
+set directory=~/.vim/swap
 set writebackup
+
+set undofile
+set undodir=~/.vim/undo
 
 
 
