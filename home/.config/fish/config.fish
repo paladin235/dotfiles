@@ -12,6 +12,8 @@ abbr tree tree --dirsfirst
 abbr ga git add
 abbr gaa git add --all
 abbr gb git branch -vv
+# delete local branches where the tracking branch is gone
+abbr gbdg 'git branch --delete --force $(git branch -vv | grep ": gone]" | choose 0)'
 abbr gbD git branch --delete --force
 abbr gc git commit --verbose
 abbr gca git commit --verbose --all

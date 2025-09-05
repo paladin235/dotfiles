@@ -63,7 +63,6 @@ antigen init ~/.antigenrc
 theme $ZSH_THEME
 
 export PATH="/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games"
-export PATH=$HOME/Library/Python/3.8/bin:$HOME/.local/bin:$PATH
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -73,7 +72,7 @@ export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin:$GOROOT/bin"
 
 # Add node
-export PATH="/opt/homebrew/opt/node@20/bin:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/opt/node@22/bin:$PATH"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 export PYTHONSTARTUP=$HOME/.pythonrc
