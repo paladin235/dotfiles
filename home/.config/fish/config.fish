@@ -59,7 +59,7 @@ switch (uname)
     case Darwin
         abbr -a -- readlink greadlink
         abbr -a -- find gfind
-        abbr -a -- idea 'open -na "/Users/daniel/Applications/IntelliJ IDEA Ultimate.app" --args'
+        abbr -a -- idea 'open -na "/Users/dpierce/Applications/IntelliJ IDEA Ultimate.app" --args'
 
         fish_add_path -g /Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/toolkit-cli
         fish_add_path -g /opt/homebrew/bin
