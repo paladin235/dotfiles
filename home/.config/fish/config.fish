@@ -63,7 +63,7 @@ switch (uname)
 
         fish_add_path -g /Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/toolkit-cli
         fish_add_path -g /opt/homebrew/bin
-        fish_add_path -g /opt/homebrew/opt/node@22/bin
+        fish_add_path -g /opt/homebrew/opt/node@24/bin
         set -gx JAVA_HOME (/usr/libexec/java_home -v 24)
         set -gx SNOWFLAKE_PRIVATE_KEY_FILE "$HOME/.ssh/toolkit/snowboarder-it.p8"
     case Linux
