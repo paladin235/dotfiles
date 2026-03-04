@@ -1,4 +1,4 @@
-# cortex-cli-completion-version: 1.0.22+060403.bb5b5ed02700
+# cortex-cli-completion-version: 1.0.28+173700.0975210405a4
 # Cortex CLI completions for fish shell
 complete -c cortex -f
 
@@ -24,6 +24,8 @@ complete -c cortex -l auto-update -d "Auto-update on launch (use --no-auto-updat
 complete -c cortex -l worktree -d "Create a new worktree with the specified branch name and start session in it"
 complete -c cortex -l plugin-dir -d "Plugin directory or GitHub repo (owner/repo, owner/repo#branch, or URL). Can be repeated."
 complete -c cortex -l shell -d "Shell executor for commands: 'powershell', 'cmd', or 'bash' (default: auto-detect; on Windows defaults to powershell)"
+complete -c cortex -l allowed-tools -d "Tools that execute without prompting for permission (e.g. "Bash(git *)" "Read" "Edit")"
+complete -c cortex -l disallowed-tools -d "Tools that are removed from the model's context and cannot be used (e.g. "Bash(rm *)" "Task(Explore)")"
 complete -c cortex -l version -s V -d "Show version"
 
 # Commands
