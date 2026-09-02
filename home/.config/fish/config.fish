@@ -1,3 +1,7 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/dpierce/.docker/bin"
+# End of Docker Desktop section.
+
 if status is-interactive
     # Commands to run in interactive sessions can go here
     set -g fish_key_bindings fish_vi_key_bindings
@@ -7,6 +11,8 @@ end
 abbr df df -h
 abbr k kubectl
 abbr tree tree --dirsfirst
+
+abbr vim nvim
 
 # git abbreviations
 abbr ga git add
@@ -52,6 +58,9 @@ abbr -a -- '....' 'cd ../../..'
 abbr -a -- '.....' 'cd ../../../..'
 
 
+# Toolkit Repository Abbreviations
+abbr -a -- clid '/Users/dpierce/git/phdata/toolkit/gradlew --project-dir /Users/dpierce/git/phdata/toolkit :cli:installDist'
+
 fish_add_path -g ~/.local/bin
 
 # OS specific config
@@ -64,8 +73,9 @@ switch (uname)
         fish_add_path -g /Users/daniel/git/phdata/toolkit/toolkit-cli/build/install/toolkit-cli
         fish_add_path -g /opt/homebrew/bin
         fish_add_path -g /opt/homebrew/opt/node@24/bin
-        set -gx JAVA_HOME (/usr/libexec/java_home -v 24)
+        set -gx JAVA_HOME /opt/homebrew/opt/openjdk@25
         set -gx SNOWFLAKE_PRIVATE_KEY_FILE "$HOME/.ssh/toolkit/snowboarder-it.p8"
+        ulimit -n 524288
     case Linux
         set -gx MAN_POSIXLY_CORRECT 1
         fish_add_path -g /opt/bin
@@ -78,3 +88,4 @@ end
 
 # Added by Windsurf
 fish_add_path /Users/daniel/.codeium/windsurf/bin
+

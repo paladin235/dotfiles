@@ -5,6 +5,7 @@ email = paladin2350@gmail.com
 [core]
   pager = less -FRX
 	autocrlf = input
+	editor = nvim
 [pull]
 	ff = only
 [includeIf "gitdir:~/git/cfa/"]
