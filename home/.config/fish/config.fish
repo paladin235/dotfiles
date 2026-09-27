@@ -57,6 +57,8 @@ abbr -a -- '...' 'cd ../..'
 abbr -a -- '....' 'cd ../../..'
 abbr -a -- '.....' 'cd ../../../..'
 
+abbr dc docker compose
+
 
 # Toolkit Repository Abbreviations
 abbr -a -- clid '/Users/dpierce/git/phdata/toolkit/gradlew --project-dir /Users/dpierce/git/phdata/toolkit :cli:installDist'
@@ -85,7 +87,4 @@ end
 if type -q direnv
     direnv hook fish | source
 end
-
-# Added by Windsurf
-fish_add_path /Users/daniel/.codeium/windsurf/bin
 
