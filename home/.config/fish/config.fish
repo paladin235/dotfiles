@@ -19,7 +19,7 @@ abbr ga git add
 abbr gaa git add --all
 abbr gb git branch -vv
 # delete local branches where the tracking branch is gone
-abbr gbdg 'git branch --delete --force $(git branch -vv | grep ": gone]" | choose 0)'
+abbr gbdg git-prune-gone
 abbr gbD git branch --delete --force
 abbr gc git commit --verbose
 abbr gca git commit --verbose --all
@@ -78,6 +78,7 @@ switch (uname)
         set -gx JAVA_HOME /opt/homebrew/opt/openjdk@25
         set -gx SNOWFLAKE_PRIVATE_KEY_FILE "$HOME/.ssh/toolkit/snowboarder-it.p8"
         ulimit -n 524288
+        zoxide init fish | source
     case Linux
         set -gx MAN_POSIXLY_CORRECT 1
         fish_add_path -g /opt/bin
